@@ -138,7 +138,7 @@
                 </svg>
             {{ end }}
         </span>
-        {{- i18n $noticeType -}}
+        {{- $noticeType -}}
     </p>
     <div class="notice-content">
         {{- if or $block (not $raw) }}{{ $raw }}{{ else }}<p>{{ $raw }}</p>{{ end -}}
