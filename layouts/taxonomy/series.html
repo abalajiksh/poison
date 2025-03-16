@@ -1,5 +1,18 @@
-{{ define "main" -}}
+{{ define "main" }}
 <h1 class="title">{{ .Title }}</h1>
+
+{{/* Get the description from the first post in the series */}}
+{{ $description := "" }}
+{{ with index .Pages 0 }}
+  {{ with .Params.series }}
+    {{ $description = .description }}
+  {{ end }}
+{{ end }}
+
+{{/* Display the description if it exists */}}
+{{ if $description }}
+  <p class="series-description">{{ $description | safeHTML }}</p>
+{{ end }}
 
 <ul class="entries">
     {{ range .Pages.GroupByDate "2006" }}
