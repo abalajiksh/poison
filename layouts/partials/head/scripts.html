@@ -31,3 +31,9 @@
 {{ if hugo.IsProduction -}}
   {{ template "_internal/google_analytics.html" . -}}
 {{ end -}}
+
+
+<!-- Conditionally include Alpine.js -->
+{{ if .Params.useAlpine }}
+{{ partial "alpine.html" . }}
+{{ end }}
