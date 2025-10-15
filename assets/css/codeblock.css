@@ -3,7 +3,7 @@
   background: none;
   border: none;
 
-  background-image: url("/icons/copy_success.svg");
+  background-image: url("");
   width: 24px;
   height: 24px;
   background-size: contain;
@@ -22,7 +22,7 @@
 
   width: 24px;
   height: 24px;
-  background-image: url("/icons/copy_content.svg");
+  background-image: url("");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
